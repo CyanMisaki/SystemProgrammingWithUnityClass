@@ -41,5 +41,7 @@ Transform вокруг своей оси с заданной скоростью.
             if(enabled)
                 _transformAccess.Dispose();
         }
+
+        
     }
 }
