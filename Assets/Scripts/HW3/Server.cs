@@ -29,7 +29,7 @@ namespace HW3
         {
             foreach (var id in _connectionIDs)
             {
-                SendMessage(message, id);
+                SendMessage(message, id.Key);
             }
         }
 
@@ -70,6 +70,7 @@ namespace HW3
                     case NetworkEventType.Nothing:
                         break;
                     case NetworkEventType.ConnectEvent:
+                        if (_connectionIDs.ContainsKey(connectionId)) return;
                         _connectionIDs.Add(connectionId,"");
                         //SendMessageToAll($"Player {connectionId} has connected.");
                         Debug.Log($"LOGServ-Player {connectionId} has connected.");
@@ -77,15 +78,16 @@ namespace HW3
                     case NetworkEventType.DataEvent:
                         var message = Encoding.Unicode.GetString(recBuffer, 0, dataSize);
                         if (_connectionIDs[connectionId] == "")
-                            _connectionIDs[channelId] = message;
+                            _connectionIDs[connectionId] = message;
                         
-                        SendMessageToAll($"Player {_connectionIDs[channelId]}: {message}");
-                        Debug.Log($"LOGServ-Player {_connectionIDs[channelId]}: {message}");
+                        SendMessageToAll($"Player {_connectionIDs[connectionId]}: {message}");
+                        Debug.Log($"LOGServ-Player {_connectionIDs[connectionId]}: {message}");
                         break;
                     case NetworkEventType.DisconnectEvent:
+                        
+                        SendMessageToAll($"Player {_connectionIDs[connectionId]} has disconnected.");
+                        Debug.Log($"LOGServ-Player {_connectionIDs[connectionId]} has disconnected.");
                         _connectionIDs.Remove(connectionId);
-                        SendMessageToAll($"Player {_connectionIDs[channelId]} has disconnected.");
-                        Debug.Log($"LOGServ-Player {_connectionIDs[channelId]} has disconnected.");
                         break;
                     case NetworkEventType.BroadcastEvent:
                         break;

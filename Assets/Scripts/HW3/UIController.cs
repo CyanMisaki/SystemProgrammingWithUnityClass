@@ -30,8 +30,8 @@ namespace HW3
             _buttonConnectClient.onClick.AddListener(() => Connect());
             _buttonDisconnectClient.onClick.AddListener(() => Disconnect());
             _buttonSendMessage.onClick.AddListener(() => SendMessage());
-            _nameField.onEndEdit.AddListener(SetUserName);
-            _nameField.gameObject.SetActive(false);
+            _nameField.onSubmit.AddListener(SetUserName);
+            _nameField.gameObject.SetActive(true);
             SetActiveToUI(false);
             
             _client.onMessageReceive += ReceiveMessage;
@@ -40,8 +40,6 @@ namespace HW3
 
         private void SetActiveToUI(bool state)
         {
-            _buttonConnectClient.gameObject.SetActive(state);
-            _buttonDisconnectClient.gameObject.SetActive(state);
             _buttonSendMessage.gameObject.SetActive(state);
             _inputField.gameObject.SetActive(state);
             _textField.gameObject.SetActive(state);
@@ -58,7 +56,7 @@ namespace HW3
         private void StartServer()
         {
             _server.StartServer();
-            _nameField.gameObject.SetActive(true);
+            
         }
 
         private void ShutDownServer()
@@ -68,7 +66,14 @@ namespace HW3
         
         private void Connect()
         {
+            if (_client.UserName == "")
+            {
+                Debug.Log("Enter name first");
+                return;
+            }
+
             _client.Connect();
+            
         }
         private void Disconnect()
         {

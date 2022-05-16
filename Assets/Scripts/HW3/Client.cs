@@ -31,7 +31,9 @@ namespace HW3
             _hostID = NetworkTransport.AddHost(topology, _port);
             _connectionID = NetworkTransport.Connect(_hostID, "127.0.0.1", _serverPort, 0, out _error);
             if ((NetworkError)_error == NetworkError.Ok)
+            {
                 _isConnected = true;
+            }
             else
                 Debug.Log((NetworkError)_error);
         }
