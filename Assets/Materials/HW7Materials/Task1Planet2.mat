@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PlanetMaterial
-  m_Shader: {fileID: 4800000, guid: 63c8b172e2755a54bb4821d2a9485d38, type: 3}
+  m_Name: Task1Planet2
+  m_Shader: {fileID: 4800000, guid: 1677635bd3dde7147bc8b7a43b7e1599, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -56,8 +56,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Ambient: 0.49
-    - _AtmosphereWidth: 1.059
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -65,17 +63,22 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Intensivity: 0.28
+    - _Height: 0.167
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _Seed: 2271
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.025333209, g: 0.3584906, b: 0, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Emission: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _HighColor1: {r: 0.16983688, g: 1, b: 0, a: 1}
+    - _HighColor2: {r: 0.4056604, g: 0.124054514, b: 0, a: 1}
+    - _HighColor3: {r: 0, g: 0.46355346, b: 0.4811321, a: 1}
   m_BuildTextureStacks: []
