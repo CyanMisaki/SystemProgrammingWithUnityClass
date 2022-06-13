@@ -18,7 +18,7 @@ public class PlanetRing : MonoBehaviour
     
     private List<GameObject> _asteroids;
     
-    private void Awake()
+    private void OnEnable()
     {
         _asteroids = new List<GameObject>();
 
@@ -46,7 +46,7 @@ public class PlanetRing : MonoBehaviour
         }
     }
 
-    private void OnDestroy()
+    private void OnDisable()
     {
         _asteroids.Clear();
     }
