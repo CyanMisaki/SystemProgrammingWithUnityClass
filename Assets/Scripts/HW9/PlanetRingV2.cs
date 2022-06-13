@@ -4,6 +4,7 @@ using Unity.Collections;
 using Unity.Jobs;
 using UnityEngine;
 using UnityEngine.Jobs;
+using Random = UnityEngine.Random;
 
 namespace HW9
 {
@@ -70,7 +71,9 @@ namespace HW9
                 
                 _asteroidsData[asteroidsDataIndexer+1] = (obj.transform.position-_parent.position).magnitude; //расстояние между планетой и астероидом
                 _asteroidsData[asteroidsDataIndexer + 2] = _rotationSpeed * Time.deltaTime * (10 / _asteroidsData[asteroidsDataIndexer + 1]); // скорость вращения в зависимости от расстояния от точки
-                _asteroidsData[asteroidsDataIndexer] = circleRadians * _asteroidsData[asteroidsDataIndexer+1]* _asteroidsData[asteroidsDataIndexer+2]; //угол
+                
+                //TODO изменить рассчет стартового угла
+                _asteroidsData[asteroidsDataIndexer] = circleRadians * Time.deltaTime * _asteroidsData[asteroidsDataIndexer+2]; //угол
                 
                 asteroidsDataIndexer += 3;
             }
