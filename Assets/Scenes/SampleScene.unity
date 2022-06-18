@@ -3947,7 +3947,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1262418357
 Transform:
   m_ObjectHideFlags: 0
@@ -3977,7 +3977,7 @@ MonoBehaviour:
   _mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
   _material: {fileID: 2100000, guid: 0877ad3a48f08e74a80e9a0258d525bd, type: 2}
   _depth: 7
-  _speedRotation: 80
+  _speedRotation: 3
 --- !u!1 &1273390341
 GameObject:
   m_ObjectHideFlags: 0
@@ -4955,7 +4955,6 @@ MonoBehaviour:
   maxSize: 0.08
   _numOfAsteroids: 150
   _minDistance: 1
-  _rotationSpeed: 2
   _maxOrbitsMul: 3
 --- !u!1 &1726322646
 GameObject:
@@ -5067,7 +5066,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1746339412
 Transform:
   m_ObjectHideFlags: 0
