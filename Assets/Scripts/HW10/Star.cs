@@ -10,7 +10,7 @@ namespace HW10
         private Mesh _mesh;
         
         [SerializeField] private ColorPoint _center;
-        [SerializeField] private ColorPoint[] _points;
+        [SerializeField, NonReorderable] private ColorPoint[] _points;
         [SerializeField] private int _frequency = 1;
 
         public int Frequency => _frequency;
