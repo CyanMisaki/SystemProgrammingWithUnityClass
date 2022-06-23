@@ -12,11 +12,15 @@ namespace HW10
         [SerializeField] private ColorPoint _center;
         [SerializeField] private ColorPoint[] _points;
         [SerializeField] private int _frequency = 1;
-        
+
+        public int Frequency => _frequency;
+        public ColorPoint[] Points => _points;
+
         private Vector3[] _vertices;
         private Color[] _colors;
 
         private int[] _triangles;
+
         private void Start()
         {
             UpdateMesh();
@@ -58,6 +62,11 @@ namespace HW10
             _mesh.vertices = _vertices;
             _mesh.colors = _colors;
             _mesh.triangles = _triangles;
+        }
+
+        private void Reset()
+        {
+            UpdateMesh();
         }
 
     }
