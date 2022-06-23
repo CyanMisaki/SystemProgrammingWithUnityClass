@@ -4826,13 +4826,13 @@ MonoBehaviour:
   _points:
   - Position: {x: 0.0580021, y: 1.1911354, z: 0.07874579}
     Color: {r: 1, g: 0.9248581, b: 0, a: 1}
-  - Position: {x: -0.017967096, y: 0.30577767, z: 0.14025322}
+  - Position: {x: -0.01, y: 0.09689098, z: 0.08}
     Color: {r: 1, g: 0.18017924, b: 0, a: 1}
   - Position: {x: -0.033335328, y: 0.754033, z: 0.036593284}
     Color: {r: 0, g: 1, b: 0.83348227, a: 1}
-  - Position: {x: -0.033480514, y: 0.2000589, z: 0.10694505}
+  - Position: {x: 0.01796122, y: 0.16594723, z: 0.079063304}
     Color: {r: 1, g: 0, b: 0.8976784, a: 1}
-  _frequency: 8
+  _frequency: 7
 --- !u!23 &1692514385
 MeshRenderer:
   m_ObjectHideFlags: 0
